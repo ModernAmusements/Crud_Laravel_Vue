@@ -1,16 +1,33 @@
-# Laravel REST APi for CRUD operation
+## Setting up Laravel + Vue
+laravel new vuejstodo
+cd vuejstodo
+composer require laravel/ui
+php artisan ui vue --auth
 
-You can create REST API following bellow steps
+npm install 
 
-# Installation
-1. Clone this repo
-```
-https://github.com/samironbarai/laravel-rest-api.git
-```
+
+npm run watch // Build
+php artisan serve // Serve
+
+## .env Settings
+// Important .env Settings (Local)
+Host	localhost
+Port	3306
+Benutzer	root
+Kennwort	root
+Socket	/Applications/MAMP/tmp/mysql/mysql.sock
+
+## Connecting to DB
+php artisan make:model Todo -mcr  // Creating Mfile C and R
+php artisan migrate               // Migrate to DB
+
+
+
+# Laravel REST APi for CRUD operations
 
 2. Install composer packages
 ```
-cd laravel-rest-api
 $ composer install
 ```
 
@@ -27,3 +44,10 @@ $ php artisan migrate
 $ php artisan tinker
 $ factory(App\Customer::class, 100)->create();
 ```
+
+
+
+# Important Notes
+
+
+
